@@ -15,6 +15,4 @@ def clean_file(input_file: str, output_file: str) -> None:
 
 input_file = "input.txt"
 output_file = "output.txt"
-result = clean_file(input_file, output_file)
-if result:
-    print(result)
+print(clean_file(input_file, output_file))

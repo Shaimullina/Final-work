@@ -2,8 +2,6 @@
 Напишите функцию, которая принимает на вход квадратную матрицу и проверяет, 
 является ли она симметричной относительно главной диагонали."""
 
-matrix = [[1, 2, 3], [2, 4, 5], [3, 5, 6]]
-
 
 def is_symmetric(matrix: list) -> bool:
     flag = True
@@ -16,4 +14,5 @@ def is_symmetric(matrix: list) -> bool:
                 return flag
 
 
-print(is_symmetric(matrix))  # True
+matrix = [[1, 2, 3], [2, 4, 5], [3, 5, 6]]
+print(is_symmetric(matrix))
