@@ -4,9 +4,9 @@
 
 
 def words_index_map(strings: list) -> dict:
-    translation = input()
-    enumNames = enumerate(translation)
-    translation.dict = {}
+    for _ in strings:
+        enumNames = list(enumerate(strings))
+    return enumNames
 
 
 # Тест

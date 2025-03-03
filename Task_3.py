@@ -4,13 +4,17 @@
 
 
 def clean_file(input_file: str, output_file: str) -> None:
-    with open(input_file) as input_f, open(output_file, "w") as output_f:
-        for line in input_f:
-            if line.strip():
-                output_f.write(line)
+    try:
+        with open(input_file) as input_f, open(output_file, "w") as output_f:
+            for line in input_f:
+                if line.strip():
+                    output_f.write(line)
+    except FileNotFoundError:
+        print(f"Файл '{input_file}' не найден!")
 
 
-# Тест
 input_file = "input.txt"
 output_file = "output.txt"
-clean_file(input_file, output_file)
+result = clean_file(input_file, output_file)
+if result:
+    print(result)

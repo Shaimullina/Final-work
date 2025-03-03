@@ -2,22 +2,18 @@
 Напишите функцию, которая принимает на вход квадратную матрицу и проверяет, 
 является ли она симметричной относительно главной диагонали."""
 
+matrix = [[1, 2, 3], [2, 4, 5], [3, 5, 6]]
+
 
 def is_symmetric(matrix: list) -> bool:
-    n = int(input())
-    matrix = []
     flag = True
-    for _ in range(n):
-        matrix_n = [int(x) for x in input().split()]
-        matrix.append(matrix_n)
-
-    for i in range(n):
-        for j in range(n):
-            if matrix[i][q] != matrix[j][i] and i != j:
+    for i in range(matrix):
+        for j in range(matrix):
+            if matrix[i][j] != matrix[j][i] and i != j:
                 flag = False
                 break
-        if flag:
-            return matrix
+            if flag:
+                return flag
 
 
 print(is_symmetric(matrix))  # True
