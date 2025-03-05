@@ -9,6 +9,5 @@ def words_index_map(strings: list) -> dict:
     return enumNames
 
 
-# Тест
 strings = ["hello world", "world of python", "hello again"]
 print(words_index_map(strings))

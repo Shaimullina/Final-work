@@ -13,7 +13,6 @@ def clean_file(input_file: str, output_file: str) -> None:
         print(f"Файл '{input_file}' не найден!")
 
 
-# Тест
 input_file = "input.txt"
 output_file = "output.txt"
 print(clean_file(input_file, output_file))
