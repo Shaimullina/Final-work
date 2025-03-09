@@ -6,12 +6,12 @@
 def is_symmetric(matrix: list) -> bool:
     flag = True
     for i in range(len(matrix)):
-        for j in range(i, len(matrix)):
+        for j in range(i, matrix):
             if matrix[i][j] != matrix[j][i]:
                 flag = False
                 break
         if flag:
-            return matrix
+            return
 
 
 matrix = [[1, 2, 3], [2, 4, 5], [3, 5, 6]]
