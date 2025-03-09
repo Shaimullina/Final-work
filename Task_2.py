@@ -4,9 +4,14 @@
 
 
 def words_index_map(strings: list) -> dict:
-    for _ in strings:
-        enumNames = list(enumerate(strings))
-    return enumNames
+    dict_words = {j: 1 for i in strings for j in i.lower().split()}
+    for i in dict_words:
+        new_list = []
+        for j in range(len(strings)):
+            if i in strings[j].lower():
+                new_list.append(j)
+        dict_words[i] = new_list
+    return dict_words
 
 
 strings = ["hello world", "world of python", "hello again"]
