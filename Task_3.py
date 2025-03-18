@@ -5,13 +5,11 @@
 
 def clean_file(input_file: str, output_file: str) -> None:
     try:
-        with open(input_file) as input_f, open(output_file, "w") as output_f:
+        with open("input", "w") as input_f:
             for line in input_f:
-                if line.strip():
-                    output_f.write(line)
+                clean_line = line.strip()
+        with open("input", "r") as input_f, open("output.txt", "a") as output_f:
+            for line in input_f:
+                output_f.write(line)
     except FileNotFoundError:
         print(f"Файл '{input_file}' не найден!")
-
-
-input_file = "input.txt"
-output_file = "output.txt"
